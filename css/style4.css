@@ -1,26 +1,16 @@
-/* General styles - put these straight into your stylesheet */
-
+/* General styles for the entire page: */
 body {
-    margin: 0;
-  }
-  
-  html {
-    font-family: 'Helvetica neue', Arial, 'sans serif';
-    font-size: 10px;
-    background-color: red;
-  }
-  
- /* Selectors to be matched up with rulesets */
+  margin: 0;
+}
 
-.card article img
-.card footer
-.card header
-.card
+html {
+  font-family:'Helvetica neue', Arial, 'sans serif';;
+  font-size: 10px;
+  background-color: #ccc;
+}
 
-/* Rulesets to be matched up with selectors */
-
-.card article img { 
-  width: 20em;
+.card {
+  width: 35em;
   height: 22em;
   margin: 5em auto;
   background-color: red;
@@ -28,9 +18,9 @@ body {
   border-radius: 1.5em;
 }
 
-.card {
-  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
-  border-radius: 1.5em 1.5em 0 0;
+.card header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
 }
 
 .card footer {
@@ -38,7 +28,120 @@ body {
   border-radius: 0 0 1.5em 1.5em;
 }
 
-.card header {
+.card article img {
   max-height: 100%;
   float: right;
+  height: 13em;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* New Rulesets: set total heigh for header and footer in ems: */
+.card header,
+.card footer {
+  height: 2.5em;
+  padding: 1em;
+}
+
+/* Remove default margin for <h2> and <p> elements: */
+.card header h2,
+.card header p,
+.card footer h2,
+.card footer p,
+.card article p {
+  margin: 0;
+}
+
+/* Set height and backgroun color for article: */
+.card article {
+  height: 13em;
+  background-color: rgba(0,0,0,0.3);  
+  line-height: 1.7em;
+}
+
+/* Style the <h2> in the header: */
+.card header h2 {
+  font-size: 2em;
+  line-height: 1.6em;
+}
+
+/* Style the <p> in the footer: */
+.card footer p {
+  font-size: 1.5em;
+  line-height: 1.6em;
+}
+
+/* Additional styling for the paragraph inside the article: */
+.card article p {
+  padding-left: 1em;
+  padding-top: .5em;
+  color: #fff;
+}
+
+/* Styles for the second business card: */
+.second-card {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: rgb(95, 160, 95);
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.second-card header {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+  border-radius: 1.5em 1.5em 0 0;
+  font-size: 1em;
+}
+
+.second-card footer {
+background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+border-radius: 0 0 1.5em 1.5em;
+}
+
+.second-card article img {
+max-height: 100%;
+float: right;
+height: 40em;
+background-color: rgba(0, 0, 0, .5);
+}
+
+/* New Rulesets: set total heigh for header and footer in ems: */
+.second-card header,
+.second-card footer {
+height: 2.5em;
+padding: 1em;
+}
+
+/* Remove default margin for <h2> and <p> elements: */
+.second-card header h2,
+.second-card header p,
+.second-card footer h2,
+.second-card footer p,
+.second-card article p {
+margin: 0;
+}
+
+/* Set height and backgroun color for article: */
+.second-card article {
+height: 10em;
+background-color: rgba(0,0,0,0.3);  
+line-height: 1.4em;
+color:#e8e5c6;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 1em;
+padding-bottom: 2em;
+}
+
+/* Style the <h2> in the header: */
+.second-card header h2 {
+font-size: 2em;
+line-height: 1.6em;
+}
+
+/* Style the <p> in the footer: */
+.second-card footer p {
+font-size: 1.5em;
+line-height: 1.6em;
 }

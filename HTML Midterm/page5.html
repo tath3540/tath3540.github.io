@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 5</title>
+    <style>
+        img{
+            width:200px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/html-midterm/page1.html">Page 1</a>
+        <span> | </span>
+        <a href="/html-midterm/page2.html">Page 2</a>
+        <span> | </span>
+        <a href="/html-midterm/page3.html">Page 3</a>
+        <span> | </span>
+        <a href="/html-midterm/page4.html">Page 4</a>
+        <span> | </span>
+        <a href="/html-midterm/page5.html">Page 5</a>
+        <span> | </span>
+    </div>
+    
+    <!-- Changelog Section-->
+    <section>
+        <h2>Changelog</h2>
+
+        <!-- Page 1 Changes-->
+        <h3>Page 1</h3>
+        <ul>
+            <li>The character encoding was not declared. I added the character encoding declaration to the 'head' section of the HTML, specifically the UTF-8 encoding.</li>
+            <li>I also added a 'lang' attribute to the html start tag to declare the language of this document.</li>
+            <li>An 'h2' tag was placed directly within a 'table' without enclosing it in a 'td' element. To fix this, I moved the 'h2' tag outside of the table and added '/tr' and '/div' closing elements to ensure proper closing- this guarantees that the HTML is valid and properly nested.</li>
+        </ul>
+
+        <!-- Page 2 Changes-->
+        <h3>Page 2</h3>
+        <ul>
+            <li>After running the page 2 code through the W3C Validator tool, I discovered the following errors with the code (following the semicolon in each line is how I proceeded to fix the error):</li>
+            <li>Error 1: Saw '<>'. Probable causes: Unescaped < or mistyped start tag; to resolve this issue, I added a proper closing tag '/b' instead of what was there originally: '<>'.</li>
+            <li>Error 2: End tag 'p' seen, but there were open elements; on line 29, there was an unclosed 'b' element before the 'p' element, so I added a closing '/b' element before the 'p' element. </li>
+            <li>Error 3: Unclosed element 'b' in line 25; this error occurred because the 'b' element was not closed properly before 'h3' was opened, so I simply closed the 'b' element before starting 'h3' and also added '/p' to properly close the 'p' element that was left open within the 'b' element.</li>
+            <li>Error 4: Element 'p' not allowed as a child of element 'b' in this context, line 30; in order to properly apply 'b' formatting to part of the paragraph text, we needed to close the 'b' element before opening 'p'. I also edited some indentation to make it more readable.</li>
+            <li>Error 5: Element 'h3' not allowed as a child of element 'b' in this context, line 35; I simply ensured that the 'b' element was closed before starting the 'h3' element - I removed the 'b' element around the 'h2' element as it is not allowed to nest headings inside the 'b' element and properly closed the 'p' element before 'h2'.</li>
+            <li>Error 6: Element 'hr' not allowed as a child of element 'b' in this context, line 36; I ensured that the 'b' element was closed before starting the 'hr' element - I removed the 'p' element and placed 'hr' outside the 'h3', as it is not allowed to next inside a heading.</li>
+            <li>Error 7: Element 'p' not allowed as a child of element 'b' in this context, line 37; I closed the 'b' element before starting the 'p' element - I properly closed the 'p' element before starting a new 'p' element.</li>
+            <li>Error 8: Element 'p' not allowed as a child of element 'b' in this context, line 45; similar to Error 7 - I closed the 'b' element before starting the 'p' element - I properly closed the 'p' element before starting a new 'p' element..</li>
+            <li>Error 9: Element 'h2 not allowed as a child of element 'b' in this context, line 51; I closed the 'b' element before starting the 'h2' element.</li>
+            <li>Error 10: Element 'p' not allowed as a child of element 'b' in this context, line 52; similar again to Error 7, I closed the 'b' element before starting the 'p' element.</li>
+            <li>Error 11: Element 'p' not allowed as a child of element 'b' in this context, line 59; once again similar to Error 7, I closed the the 'b' element before starting the 'p' element - I properly closed the 'p' element before starting a new 'p' element.</li>
+            <li>Error 12: Element 'p' not allowed as a child of element 'b' in this context, line 65; once again similar to Error 7, I closed the 'b' element before starting the 'p' element.</li>
+            <li>Error 13: Element 'h6' not allowed as a child of element 'b' in this context, line 72; I closed the 'b' element before starting the 'h6' element.</li>
+            <li>Error 14: Heading cannot be a child of another heading, line 100; This error occurrec because an 'h3' element was placed within another 'h3' element. To resolve this, I removed the 'h3' element and used a single 'h3' without nesting.</li>
+            <li>Error 15: Element 'h3' not allowed as a child of element 'b' in this context, line 100; I closed the 'b' element before starting the 'p' element.</li>
+            <li>Error 16: Element 'p' not allowed as a child of element 'b' in this context, line 101; I closed the 'b' element before starting the 'p' element. </li>
+            <li>Error 17: Element 'p' not allowed as a child of element 'b' in this context, line 110; I closed the 'b' element before starting the 'p' element - I properly closed the 'p' element before starting a new 'p' element.</li>
+            <li>Error 18: End tag for 'body' seen, but there were unclosed element, line 116; This error indicates that there were unclosed elements in the HTML. To resolve this, I reviewed the code and ensured that all open elements were properly closed - the culprits were: 'b', 'h2', 'h3', 'hr', and 'p'. 'h6' was also not properly closed (line 72).</li>
+            <li>Error 19: Bad value 'where do i go' for attribute href on element 'a': spaces not allowed; there was a space in the URL in line 55 - I simply replaced the spaces with dashes.</li>
+
+
+        </ul>
+
+        <!-- Page 3 Changes-->
+        <h3>Page 3</h3>
+        <ul>
+            <li>Error 1: Warning: Consider adding a 'lang' attribute to the 'html' start tag to declare the language of this document; in order to address this warning, I added a 'lang' attribute to the 'html' start tag to declare the language of the HTML.</li>
+            <li>Error 2: Error: Start tag seen without seeing a doctype first: to address this error, I added the DOCTYPE html declaration in order to ensure that the document type and HTML version were properly specified.</li>
+            <li>Error 3: Error: Element 'head' is missing a required instance of child element 'title'; I added the 'title' element with the text "World of Cars", which will set a title for the webpage.</li>
+            <li>In addition: I added the essential 'head' elements, including the meta and the link to the cars.css stylesheet. In addition, I added the device-width attribute to ensure that the webpage content adapts to the particular device's screen width.</li>
+        </ul>
+
+        <!-- Page 4 Changes-->
+        <h3>Page 4</h3>
+        <ul>
+            <li>Error 1: Start tag seen without seeing a doctype first: the DOCTYPE declaration is missing; I simply added the declaration to the very beginning of the code.</li>
+            <li>Error 2: An 'img' element must have an 'alt' attribute: for image 'dogsFrolic'; to fix this, I added an 'alt' attribute of 'Dogs frolicking' to the image 'dogsFrolic'.</li>
+            <li>Error 3: An 'img' element must have an 'alt' attribute: for image 'dogSinging'; to fix this, I added an 'alt' attribute of 'Dog singing' to the image 'dogSinging'.</li>
+            <li>Error 4: An 'img' element must have an 'alt' attribute: for image 'labLab'; to fix this, I added an 'alt' attribute of 'Laboratory Labrador' to the image 'labLab'.</li>
+            <li>Error 5: An 'img' element must have an 'alt' attribute: for image 'boxingCats'; to fix this, I added an 'alt' attribute of 'Cats boxing' to the image 'boxingCats'.</li>
+            <li>Notes: I also went ahead and added 'alt' attributes to the other images as well: 'Orange cat' for 'orangeCat', 'Cat in the sun' for 'sunCat', 'Aliens with diamonds' for 'diamondAlien', 'Myterious creature' for 'creature', and 'Aliens touching down' for 'aliensPeace'.</li>
+            <li>Error 6: Start tag 'img' seen in 'table': there was an extra 'img' tag outside of a 'td' element; to fix this, I removed the extra 'img' tag to ensure that the table structure is actually correct (there were two of these errors, simply added a 'tr' and placed the 'img' back inside).</li>
+            <li>Error 7: Fatal error: in lines 39-40:</li>
+        </ul>
+
+        <!-- Page 5 Changes-->
+        <h3>Page 5</h3>
+        <ul>
+            <li> <!--put changes here:--></li>
+        </ul>
+
+    </section>
+
+<!-- Content -->
+    <table>
+        <tr>
+            <th>Dogs</th>
+            <th>Cats</th>
+            <th>Other?</th>
+        </tr>
+        <tr>
+            <td><img src="img/dogsFrolic.png"></td>
+            <td><img src="img/dogSinging.png">
+            <td><img src="img/labLab.png"></td>
+        </tr>
+        <tr>
+            <td><img src="img/boxingCats.png"></td>
+            <img src="img/orangeCat.png">
+            <td><img src="img/sunCat.png"></td>
+        </tr>
+        <tr>
+            <td><img src="img/diamondAlien.png"></td>
+            <img src="img/creature.png"></td>
+            <td><img src="img/aliensPeace.png"></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

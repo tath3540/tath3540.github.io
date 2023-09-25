@@ -35,6 +35,7 @@
         <!-- Page 1 Changes-->
         <h3>Page 1</h3>
         <ul>
+            <li>After running the page 1 code through the W3C Validator tool, I discovered the following errors with the code (following the semicolon in each line is how I proceeded to fix the error):</li>
             <li>The character encoding was not declared. I added the character encoding declaration to the 'head' section of the HTML, specifically the UTF-8 encoding.</li>
             <li>I also added a 'lang' attribute to the html start tag to declare the language of this document.</li>
             <li>An 'h2' tag was placed directly within a 'table' without enclosing it in a 'td' element. To fix this, I moved the 'h2' tag outside of the table and added '/tr' and '/div' closing elements to ensure proper closing- this guarantees that the HTML is valid and properly nested.</li>
@@ -44,7 +45,7 @@
         <h3>Page 2</h3>
         <ul>
             <li>After running the page 2 code through the W3C Validator tool, I discovered the following errors with the code (following the semicolon in each line is how I proceeded to fix the error):</li>
-            <li>Error 1: Saw '<>'. Probable causes: Unescaped < or mistyped start tag; to resolve this issue, I added a proper closing tag '/b' instead of what was there originally: '<>'.</li>
+            <li>Error 1: Saw '<>'. Probable causes: Unescaped '<' or mistyped start tag; to resolve this issue, I added a proper closing tag '/b' instead of what was there originally: '<>'.</li>
             <li>Error 2: End tag 'p' seen, but there were open elements; on line 29, there was an unclosed 'b' element before the 'p' element, so I added a closing '/b' element before the 'p' element. </li>
             <li>Error 3: Unclosed element 'b' in line 25; this error occurred because the 'b' element was not closed properly before 'h3' was opened, so I simply closed the 'b' element before starting 'h3' and also added '/p' to properly close the 'p' element that was left open within the 'b' element.</li>
             <li>Error 4: Element 'p' not allowed as a child of element 'b' in this context, line 30; in order to properly apply 'b' formatting to part of the paragraph text, we needed to close the 'b' element before opening 'p'. I also edited some indentation to make it more readable.</li>
@@ -70,6 +71,7 @@
         <!-- Page 3 Changes-->
         <h3>Page 3</h3>
         <ul>
+            <li>After running the page 3 code through the W3C Validator tool, I discovered the following errors with the code (following the semicolon in each line is how I proceeded to fix the error):</li>
             <li>Error 1: Warning: Consider adding a 'lang' attribute to the 'html' start tag to declare the language of this document; in order to address this warning, I added a 'lang' attribute to the 'html' start tag to declare the language of the HTML.</li>
             <li>Error 2: Error: Start tag seen without seeing a doctype first: to address this error, I added the DOCTYPE html declaration in order to ensure that the document type and HTML version were properly specified.</li>
             <li>Error 3: Error: Element 'head' is missing a required instance of child element 'title'; I added the 'title' element with the text "World of Cars", which will set a title for the webpage.</li>
@@ -79,6 +81,7 @@
         <!-- Page 4 Changes-->
         <h3>Page 4</h3>
         <ul>
+            <li>After running the page 4 code through the W3C Validator tool, I discovered the following errors with the code (following the semicolon in each line is how I proceeded to fix the error):</li>
             <li>Error 1: Start tag seen without seeing a doctype first: the DOCTYPE declaration is missing; I simply added the declaration to the very beginning of the code.</li>
             <li>Error 2: An 'img' element must have an 'alt' attribute: for image 'dogsFrolic'; to fix this, I added an 'alt' attribute of 'Dogs frolicking' to the image 'dogsFrolic'.</li>
             <li>Error 3: An 'img' element must have an 'alt' attribute: for image 'dogSinging'; to fix this, I added an 'alt' attribute of 'Dog singing' to the image 'dogSinging'.</li>
@@ -87,12 +90,6 @@
             <li>Notes: I also went ahead and added 'alt' attributes to the other images as well: 'Orange cat' for 'orangeCat', 'Cat in the sun' for 'sunCat', 'Aliens with diamonds' for 'diamondAlien', 'Myterious creature' for 'creature', and 'Aliens touching down' for 'aliensPeace'.</li>
             <li>Error 6: Start tag 'img' seen in 'table': there was an extra 'img' tag outside of a 'td' element; to fix this, I removed the extra 'img' tag to ensure that the table structure is actually correct (there were two of these errors, simply added a 'tr' and placed the 'img' back inside).</li>
             <li>Error 7: Fatal error: in lines 39-40:</li>
-        </ul>
-
-        <!-- Page 5 Changes-->
-        <h3>Page 5</h3>
-        <ul>
-            <li> <!--put changes here:--></li>
         </ul>
 
     </section>

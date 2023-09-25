@@ -61,8 +61,8 @@
             <li>Error 14: Heading cannot be a child of another heading, line 100; This error occurrec because an 'h3' element was placed within another 'h3' element. To resolve this, I removed the 'h3' element and used a single 'h3' without nesting.</li>
             <li>Error 15: Element 'h3' not allowed as a child of element 'b' in this context, line 100; I closed the 'b' element before starting the 'p' element.</li>
             <li>Error 16: Element 'p' not allowed as a child of element 'b' in this context, line 101; I closed the 'b' element before starting the 'p' element. </li>
-            <li>Error 17: Element 'p' not allowed as a child of element 'b' in this context, line 110; I closed the 'b' element before starting the 'p' element - I properly closed the 'p' element before starting a new 'p' element.</li>
-            <li>Error 18: End tag for 'body' seen, but there were unclosed element, line 116; This error indicates that there were unclosed elements in the HTML. To resolve this, I reviewed the code and ensured that all open elements were properly closed - the culprits were: 'b', 'h2', 'h3', 'hr', and 'p'. 'h6' was also not properly closed (line 72).</li>
+            <li>Error 17: Element 'p' not allowed as a child of element 'b' in this context, line 110; I closed the 'b' element before starting the 'p' element - I properly closed the previous 'p' element before starting a new 'p' element.</li>
+            <li>Error 18: End tag for 'body' seen, but there were unclosed element, line 116; This error indicates that there were unclosed elements in the HTML. To resolve this, I reviewed the code and ensured that all open elements were properly closed.</li>
             <li>Error 19: Bad value 'where do i go' for attribute href on element 'a': spaces not allowed; there was a space in the URL in line 55 - I simply replaced the spaces with dashes.</li>
 
 

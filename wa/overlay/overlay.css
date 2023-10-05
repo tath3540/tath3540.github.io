@@ -1,0 +1,22 @@
+.parent {
+    position: relative;
+}
+
+.image1 {
+    width: 100%;
+    height: auto;
+}
+
+.image2 {
+    position: absolute;
+    top: 165px;
+    left: -10px;
+    width: 25%;
+}
+
+.image3 {
+    position: absolute;
+    top: 275px;
+    left: 49px;
+    width: 90%;
+}

@@ -1,33 +1,37 @@
-body {
-    background-color: blueviolet;
+#narrowScreen {
+    background-color: green;
 }
 
-div {
-    background-color: aquamarine;
-    color:aliceblue;
-    font-size: 5vw;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5vw;
-    margin: 2.5vw;
-    border: yellow 5px solid;
+#wideScreen {
+    background-color: red;
 }
 
-.div-wrapper {
-    display: gird;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+#shortScreen {
+    background-color: turquoise;
 }
 
-@media screen and (max-width: 900px) {
-    body {
-        background-color: red;
+#tallScreen {
+    background-color: lavender;
+}
+
+/* Media query for screen width less than 600px */
+@media only screen and (max-width: 600px) {
+    #narrowScreen {
+        background-color: purple;
     }
-
-    .div-wrapper {
-        display: flex;
-        flex-direction: column;
+    #wideScreen {
+        background-color: lightblue;
     }
 }
 
+/* Media query for screen height less than 500px */
+@media only screen and (max-height: 500px) {
+    #shortScreen {
+        background-color: yellow;
+    }
+    #tallScreen {
+        background-color: orange;
+    }
+}
 
 

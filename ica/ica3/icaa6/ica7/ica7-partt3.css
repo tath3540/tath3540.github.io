@@ -11,24 +11,28 @@
     background-color: lavender;
 }
 
+/* Media query for screen width less than 600px */
 @media only screen and (max-width: 600px) {
     #narrowScreen{
         background-color: purple;
     }
 }
 
+/* Media query for screen width greater than 800px */
 @media screen and (min-width: 800px) {
     #wideScreen {
         background-color: lightblue; 
     }
 }
 
+/* Media query for screen height less than 500px */
 @media screen and (max-height: 500px) {
     #shortScreen {
         background-color: yellow; 
     }
 }
 
+/* Media query for screen height greater than 800px */
 @media screen and (min-height: 800px) {
     #tallScreen {
         background-color: orange; 

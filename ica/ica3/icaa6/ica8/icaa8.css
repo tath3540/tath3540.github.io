@@ -1,0 +1,33 @@
+#box1 {
+    width: 25vw;
+    height: 20vh;
+    background-color: indianred;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+#box1:hover {
+    background-color: purple;
+}
+
+#box2 {
+    width: 25vw;
+    height: 20vh;
+    position: relative;
+    background-color: orangered;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); /* Remove the inner cubic-bezier */
+    animation-duration: 4s;
+    animation-name: box2move; /* Specify the animation name */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes box2move {
+    from {
+        top: 15vw;
+        left: 0vw;
+    }
+    to { /* Change 'top' to 'to' */
+        top: 0vw;
+        left: 15vw;
+    }
+}

@@ -5,11 +5,11 @@ body{
     background-color: rgb(149, 214, 217);
 }
 nav{
-    height: 50vh;
+    height: 4vh;
+    width: 98%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    height:20px;
     background-color: rgb(255, 234, 9);
 }
 nav a{
@@ -17,27 +17,76 @@ nav a{
     text-align: center;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: bold;
-    color:rgb(237, 107, 21);
+    font-weight: bold;
+    position: sticky;
+    color:rgb(90, 14, 121);
+    transition: color 0.03s 
+}
+
+nav a:hover {
+    color: rgb(230,31,84);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.photos {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    width:30vw;
+    height: 30vh;
 }
 
 h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgb(230, 31, 84)
+    color:rgb(230, 31, 84);
 }
 
+.grid {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 50px;
+}
 
-img{
-    width:30vw;
-    height: 30vh;
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(83, 8, 114)
 }
 
 #red-ball{
     background-color: rgb(84, 66, 241);
     width: 20px;
-    height:20px;
+    height:13px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
-    top:0;
+    bottom: 76.5vh;
+    animation: moveBall 5s linear infinite;
+}  
+
+@keyframes moveBall {
+    0% {
+        left: 0vw;
+    }
+    50% {
+        left: calc(100vw - 5vw);
+    }
+    100% {
+        left: 0vw;
+    }
+
 }

@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(149, 214, 217);
 }
 nav{
     height: 50vh;
@@ -10,13 +10,20 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(255, 234, 9);
 }
 nav a{
-    width:10vw;
+    width:18vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: bold;
+    color:rgb(237, 107, 21);
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(230, 31, 84)
 }
 
 
@@ -26,7 +33,7 @@ img{
 }
 
 #red-ball{
-    background-color: crimson;
+    background-color: rgb(84, 66, 241);
     width: 20px;
     height:20px;
     border-radius: 50%;

@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #d0d5f0;
+    --secondary-color: #9ca8eb;
+    --text-color: #2c397a;
+}
+
+/* Style the container */
+.subscribe-follow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--secondary-color); 
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the newsletter and follow sections */
+.subscribe,
+.follow {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Style the headings */
+.subscribe h2,
+.follow h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color); 
+}
+
+/* Style the input field and button (for the newsletter) */
+.subscribe input[type="email"],
+.subscribe button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transition: color 0.2s;
+}
+
+.subscribe button:hover {
+    background-color: #FF6B6B;
+}
+
+/* Style the social icons (for the follow section) */
+.follow .social-icons a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.follow .social-icons a:hover {
+    color: #FF6B6B; 
+}
+
+/* Reset default margin and padding on all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font for the entire page */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Style the header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'PTSans', sans-serif;
+}
+
+header p {
+    margin-bottom: 10px;
+}
+
+/* Style the image gallery section */
+.image-gallery {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--secondary-color);
+    padding: 10px;
+    overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+
+/* Style the individual images in the gallery */
+.image-gallery img {
+    max-width: 100%; 
+    max-height: 150px; 
+    margin: 0 10px; 
+}
+
+/* Style the concert schedule section */
+.concert-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Individual concert card */
+.concert-card {
+    background-color: var(--secondary-color); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.concert-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color); 
+}
+
+.concert-card p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 400px) {
+    header {
+        padding: 1rem;
+    }
+
+    .concert-schedule {
+        padding: 1rem;
+    }
+}
+
+/* Media query for larger screens (desktop) */
+@media (min-width: 1500px) {
+    header {
+        padding: 3rem;
+    }
+
+    .concert-schedule {
+        padding: 3rem;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA9 - Interactive Elements</title>
+    <style>
+        /* CSS for styling the elements */
+        .change-text {
+            color: blue;
+            cursor: pointer;
+        }
+        .change-background {
+            background-color: yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Elements</h1>
+
+    <!-- Element 1: Change Text Color -->
+    <p id="textElement" class="change-text">Click me to change text color!</p>
+
+    <!-- Element 2: Change Background Color -->
+    <div id="backgroundElement" class="change-background">
+        Click me to change background color!
+    </div>
+
+    <script>
+        // JavaScript event listeners
+        const textElement = document.getElementById("textElement");
+        const backgroundElement = document.getElementById("backgroundElement");
+
+        textElement.addEventListener("click", function () {
+            textElement.style.color = "red";
+        });
+
+        backgroundElement.addEventListener("click", function () {
+            backgroundElement.style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>

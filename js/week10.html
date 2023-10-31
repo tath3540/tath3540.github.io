@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fun Animal Facts Generator</title>
+    <link rel="stylesheet" href="ica6.css">
+    <style>
+      /* Add some basic styles to make it engaging */
+      body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #333;
+      }
+
+      #animalFact {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fun Animal Facts Generator</h1>
+    <button id="generateFactButton">Generate Random Animal Fact</button>
+    <p id="animalFact"></p>
+
+    <script>
+      const generateFactButton = document.getElementById("generateFactButton");
+      const animalFactElement = document.getElementById("animalFact");
+
+      // Define an array of fun animal facts
+      const animalFacts = [
+        "A group of flamingos is called a 'flamboyance.'",
+        "Polar bears have black skin and colorless fur.",
+        "Octopuses have three hearts.",
+        "Cows have best friends and can become stressed when separated from them.",
+        "Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+        "Roosters prevent themselves from going deaf due to their own loud crowing, by tilting their heads back when they crow, covering their ear canal",
+        "Koalas can sleep for up to 22 hours per day",
+        "A group of parrots is known as a 'pandemonium'",
+        "A common garden snail has 14,000 teeth",
+        "A Blue Whale's tongue can weigh as much as a car, or a small adult elephant",
+        "The Nile crocodiles jaws can apply 5,000 pounds of pressure per square inch",
+        "The loudest animal relative to its size is the Water Boatman, which measures just 12mm long but can produce 99dB of sound by rubbing its genitalia across its abdomen"
+      ];
+
+      // Define an array of colors to cycle through
+      const colors = ["#3498db", "#e74c3c", "#2ecc71", "#f1c40f", "#9b59b6"];
+      let colorIndex = 0;
+
+      generateFactButton.addEventListener('click', generateRandomAnimalFact);
+
+      function generateRandomAnimalFact() {
+        // Change the button's background color
+        generateFactButton.style.backgroundColor = colors[colorIndex];
+
+        // Increment the colorIndex and wrap around
+        colorIndex = (colorIndex + 1) % colors.length;
+
+        // Generate a random animal fact and display it
+        const randomIndex = Math.floor(Math.random() * animalFacts.length);
+        animalFactElement.textContent = animalFacts[randomIndex];
+      }
+    </script>
+  </body>
+</html>

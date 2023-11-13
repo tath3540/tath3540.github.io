@@ -1,54 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>San Jose Image Gallery</title>
-  <style>
-    h1 {
-      font-family: helvetica, arial, sans-serif;
-      text-align: center;
-    }
-
-    body {
-      width: 640px;
-      margin: 0 auto;
-    }
-
-    .full-img {
-      position: relative;
-      display: block;
-      width: 640px;
-      height: 480px;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 640px;
-      height: 480px;
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    button {
-      border: 0;
-      background: rgba(150, 150, 150, 0.6);
-      text-shadow: 1px 1px 1px white;
-      border: 1px solid #999;
-      position: absolute;
-      cursor: pointer;
-      top: 2px;
-      left: 2px;
-    }
-
-    .thumb-bar img {
-      display: block;
-      width: 20%;
-      float: left;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="wa11.css">
 </head>
 <body>
   <h1>San Jose Image Gallery</h1>
@@ -56,42 +10,20 @@
   <div class="full-img">
     <img
       class="displayed-img"
-      src="images/sanjose1.jpg"
-      alt="Description for San Jose Image 1" />
+      src="sanjose1.jpg"
+      alt="Sunset over downtown San Jose" />
     <div class="overlay"></div>
     <button class="dark">Darken</button>
   </div>
 
-  <div class="thumb-bar"></div>
+  <div class="thumb-bar">
+    <!-- Images added dynamically with JavaScript -->
+  </div>
 
-  <script>
-    const imageFilenames = ['sanjose1.jpg', 'sanjose2.jpg', 'sanjose3.jpg', 'sanjose4.jpg', 'sanjose5.jpg'];
-
-    const altText = {
-      sanjose1: 'Description for San Jose Image 1',
-      sanjose2: 'Description for San Jose Image 2',
-      sanjose3: 'Description for San Jose Image 3',
-      sanjose4: 'Description for San Jose Image 4',
-      sanjose5: 'Description for San Jose Image 5'
-    };
-
-    const thumbBar = document.querySelector('.thumb-bar');
-
-    for (let i = 0; i < imageFilenames.length; i++) {
-      const newImage = document.createElement('img');
-      newImage.setAttribute('src', 'images/' + imageFilenames[i]);
-      newImage.setAttribute('alt', altText[imageFilenames[i].slice(0, -4)]);
-
-      newImage.addEventListener('click', function () {
-        const displayedImg = document.querySelector('.displayed-img');
-        displayedImg.setAttribute('src', 'images/' + imageFilenames[i]);
-        displayedImg.setAttribute('alt', altText[imageFilenames[i].slice(0, -4)]);
-      });
-
-      thumbBar.appendChild(newImage);
-    }
-  </script>
+  <script src="wa11.js"></script>
 </body>
 </html>
+
+
 
 

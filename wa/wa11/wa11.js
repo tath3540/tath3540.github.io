@@ -1,41 +1,58 @@
-const imageFilenames = ['sanjose1.jpg', 'sanjose2.jpg', 'sanjose3.jpg', 'sanjose4.jpg', 'sanjose5.jpg'];
+// Array of image filenames
+const imageFilenames = [
+  'sanjose1.jpg',
+  'sanjose2.jpg',
+  'sanjose3.jpg',
+  'sanjose4.jpg',
+  'sanjose5.jpg'
+];
 
+// Object with alternative text for each image
 const altText = {
-  sanjose1: 'Description for San Jose Image 1',
-  sanjose2: 'Description for San Jose Image 2',
-  sanjose3: 'Description for San Jose Image 3',
-  sanjose4: 'Description for San Jose Image 4',
-  sanjose5: 'Description for San Jose Image 5'
+  'sanjose1.jpg': 'Sunset over downtown San Jose',
+  'sanjose2.jpg': 'San Jose mountain overlooking the town',
+  'sanjose3.jpg': 'Redwood forest',
+  'sanjose4.jpg': 'Downtown San Jose - Cityscape',
+  'sanjose5.jpg': 'Palm trees in downtown San Jose'
 };
 
+// Thumb-bar reference
 const thumbBar = document.querySelector('.thumb-bar');
 
-for (let i = 0; i < imageFilenames.length; i++) {
-  const newImage = document.createElement('img');
-  newImage.setAttribute('src', 'images/' + imageFilenames[i]);
-  newImage.setAttribute('alt', altText[imageFilenames[i].slice(0, -4)]);
+// Displayed image reference
+const displayedImg = document.querySelector('.displayed-img');
 
-  // Adding a click event listener to each thumbnail image
-  newImage.addEventListener('click', function () {
-    const displayedImg = document.querySelector('.displayed-img');
-    displayedImg.setAttribute('src', 'images/' + imageFilenames[i]);
-    displayedImg.setAttribute('alt', altText[imageFilenames[i].slice(0, -4)]);
-  });
-
-  thumbBar.appendChild(newImage);
-}
-
-const btn = document.querySelector('.dark');
+// Overlay reference
 const overlay = document.querySelector('.overlay');
 
-btn.addEventListener('click', function () {
-  if (btn.getAttribute('class') === 'dark') {
-    // Darken effect
+// Button reference
+const btn = document.querySelector('button');
+
+// Loop through image filenames
+imageFilenames.forEach(filename => {
+  const newImage = document.createElement('img');
+  newImage.src = filename; // Setting the image path
+  newImage.alt = altText[filename]; // Setting alt text from the object
+
+  // Add each image to thumb-bar
+  thumbBar.appendChild(newImage);
+
+  // Add click event listener to each thumbnail image
+  newImage.addEventListener('click', () => {
+    displayedImg.src = newImage.src;
+    displayedImg.alt = newImage.alt;
+  });
+});
+
+// Click event listener for the darken/lighten button
+btn.addEventListener('click', () => {
+  const currentClass = btn.getAttribute('class');
+  
+  if (currentClass === 'dark') {
     btn.setAttribute('class', 'light');
     btn.textContent = 'Lighten';
     overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
   } else {
-    // Lighten effect
     btn.setAttribute('class', 'dark');
     btn.textContent = 'Darken';
     overlay.style.backgroundColor = 'rgba(0,0,0,0)';

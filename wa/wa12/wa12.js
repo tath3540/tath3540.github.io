@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       tweetButton.target = "_blank";
       tweetButton.textContent = "Share on Twitter";
 
-      // Append the tweet button to the controls section
       const controlsSection = document.querySelector(".controls");
       controlsSection.appendChild(tweetButton);
   }

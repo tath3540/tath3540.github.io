@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.phone-number-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.digit-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digit-option {
+  margin: 2px;
+  padding: 5px;
+  border: 10px solid #ccc;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.stop-button {
+  margin-top: 5px;
+  padding: 10px 20px;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.final-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1.5px solid #000; 
+  margin-left: 10px;
+  padding: 10px; 
+}

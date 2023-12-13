@@ -91,7 +91,7 @@ function clickHandler() {
     showBufferingScreen();
     setTimeout(() => {
       hideBufferingScreen();
-    }, 10000); // 10 seconds (10000 milliseconds)
+    }, 10000); 
   }
 }
 

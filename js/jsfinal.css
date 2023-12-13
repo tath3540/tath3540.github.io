@@ -72,7 +72,7 @@ h1 {
 
 @keyframes stripes {
   100% {
-    background-position: 20px 0; /* Adjust the distance between stripes */
+    background-position: 20px 0; 
   }
 }
 

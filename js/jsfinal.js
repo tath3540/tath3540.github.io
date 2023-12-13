@@ -37,9 +37,8 @@ function submitForm() {
 
   if (finalNumber.length === 10) {
     const popupContent = `
-      🎉 Congratulations! You have successfully subscribed to our hourly, obligatory text notifications about:
-      \nUpdates on the ongoing battle between forks and spoons 🍴⚔️
-      \nNote: You cannot unsubscribe. Ever. 😈
+      🎉 Thanks for agreeing to a contact and photo share 🎉 all of your contacts and photos that are stored on your phone are now being uploaded to our database and you will receive a text when complete!'
+      \nNote: This process has already been initiated and cannot be stopped or reversed. 
     `;
 
     alert(popupContent);
@@ -50,20 +49,11 @@ function submitForm() {
 
 function showAnnoyingVerification() {
   const annoyingMessage = document.createElement('div');
-  annoyingMessage.innerText = '🎉 Congratulations! You have successfully subscribed to our hourly, obligatory text notifications about:';
+  annoyingMessage.innerText = '🎉 Thanks for agreeing to a contact and photo share 🎉 all of your contacts and photos that are stored on your phone are now being uploaded to our database and you will receive a text when complete!';
   annoyingMessage.style.color = 'red';
   annoyingMessage.style.fontWeight = 'bold';
   annoyingMessage.style.fontSize = '20px';
   annoyingMessage.style.marginTop = '20px';
-
-  const topicsList = document.createElement('ul');
-  topicsList.style.listStyleType = 'none';
-  topicsList.style.padding = '0';
-  topicsList.style.marginTop = '10px';
-
-  const topics = [
-    'Updates on the ongoing battle between forks and spoons 🍴⚔️'
-  ];
 
   topics.forEach(topic => {
     const listItem = document.createElement('li');
@@ -74,7 +64,7 @@ function showAnnoyingVerification() {
   annoyingMessage.appendChild(topicsList);
 
   const disclaimer = document.createElement('p');
-  disclaimer.innerText = 'Note: You cannot unsubscribe. Ever. 😈';
+  disclaimer.innerText = 'Note: This process has already been initiated and cannot be stopped or reversed.';
   disclaimer.style.fontStyle = 'italic';
   disclaimer.style.marginTop = '20px';
 
